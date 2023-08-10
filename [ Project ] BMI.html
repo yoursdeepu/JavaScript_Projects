@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI</title>
+    <style>
+        .box {
+            border: 6px solid rgb(90, 122, 239);
+            box-shadow: 3px 3px 15px rgb(117, 115, 115);
+            border-radius: 20px;
+            width: 400px;
+            height: 500px;
+            background-color: #f7f4f4;
+            margin-left: 60%;
+            margin-top: 5%;
+
+        }
+
+        h2 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 30px;
+            margin-left: 20%;
+        }
+
+        h4 {
+            position: absolute;
+            left: 70%;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .f1 {
+            background-color: white;
+            padding-top: 60px;
+            padding-bottom: 20px;
+            text-align: center;
+            color: rgb(60, 60, 161);
+            font-weight: 600;
+            border-radius: 20px;
+            border: none;
+            margin-left: 17%;
+            font-size: large;
+
+
+        }
+
+        h5 {
+            margin-left: 15%;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .but {
+            padding: 15px;
+            border-radius: 20px;
+            border: none;
+            background-color: rgb(90, 122, 239);
+            color: white;
+            margin-left: 33%;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .box .f1:hover {
+            border: 1px solid rgb(59, 59, 247);
+        }
+
+        span {
+            color: rgb(58, 58, 212);
+            font-size: larger;
+        }
+
+        p {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: white;
+            font-size: 85px;
+            position: fixed;
+            left: 100px;
+
+        }
+
+        .m {
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            position: fixed;
+            left: 10px;
+            top: 5px;
+        }
+
+        .b1 {
+            background-color: rgb(255, 255, 255);
+            height: 70px;
+            width: 190px;
+            border-radius: 50px;
+            position: fixed;
+            top: 20px;
+            left: 600px;
+
+        }
+
+        h3 {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body background="8019058.webp">
+    <div class="m"></div>
+
+    <div class="ibmi">
+        <p>SIMPLE BMI <br> CALCULATOR </p>
+
+    </div>
+    <div class="bg">
+        <div class="box">
+            <h2> BMI Calculator</h2>
+            <br>
+            <h4> Weight (kg) </h4>
+            <input class="f1" type="text" id="weight">
+            <br><br><br>
+            <h4>Height(cm)</h4>
+            <input class="f1" type="text" id="height">
+            <br><br><br>
+            <button class="but" id="btn">Calculate BMI</button>
+            <h5 id="ans">Your BMI is : </h5>
+        </div>
+    </div>
+
+    </div>
+
+    <script>
+        document.getElementById('btn').addEventListener("click", Mybmi);
+        function Mybmi() {
+            let wt = document.getElementById("weight").value;
+            let ht = document.getElementById("height").value;
+
+            let BMI1 = wt / (ht * ht) * 10000;
+            let BMI = Math.floor(BMI1);
+            if (BMI <= 18.5) {
+                document.getElementById("ans").innerHTML = "Your BMI is : " + "<span>" + BMI + "</span>" + " And  You are Under weight !!";
+            }
+            else if (BMI >= 18.5 && BMI <= 24.9) {
+                document.getElementById("ans").innerHTML = "Your BMI is : " + "<span>" + BMI + "</span>" + " And You have Normal weight !!";
+            }
+            else if (BMI >= 25 && BMI <= 29.5) {
+                document.getElementById("ans").innerHTML = "Your BMI is : " + "<span>" + BMI + "</span>" + " And You are Over weight !!";
+            }
+            else if (BMI >= 30 && BMI <= 34.5) {
+                document.getElementById("ans").innerHTML = "Your BMI is : " + "<span>" + BMI + "</span>" + " And Your weight is OBESE !!";
+            }
+            else if (BMI > 35) {
+                document.getElementById("ans").innerHTML = "Your BMI is : " + "<span>" + BMI + "</span>" + " And Your weight is Extremely OBESE !!";
+            }
+
+        }
+    </script>
+</body>
+
+</html>

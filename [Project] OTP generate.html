@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Genetare</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        #lock{
+            width: 150px;
+            margin-left: 45%;
+            margin-top: 1%;
+            
+        }
+        h1{
+            padding: 25px;
+            width:300px;
+            border-radius:20px;
+            background-color:rgb(214, 94, 14);
+            border: 5px solid rgb(53, 194, 255);
+            color: white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            letter-spacing: 18px;
+            font-size: 50px;
+            text-align: center;
+            margin-left: 38%;
+            margin-top: 5%;
+            
+        }
+        h2{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            background-color: rgb(39, 134, 242);
+            padding: 15px;
+            font-size: 60px;
+            width: 330px;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            position: fixed;
+            top: 200px;
+
+        }
+        span{
+            color: rgb(214, 94, 14);
+        }
+        #gen{
+            position:absolute;
+            left: 44%;
+            top: 55%;
+            font-size:22px;
+            padding: 15px;
+            color: white;
+            border: 3px solid rgb(236, 109, 29);
+            border-radius: 20px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-weight: 600;
+            background-color: rgb(41, 44, 61);
+        }
+        #gen:hover{
+            
+            background-color: rgb(214, 94, 14);
+            color: rgb(255, 255, 255);
+        }
+
+    </style>
+
+    <script>
+        const myan=Math.floor(Math.random()*9999);
+        document.write("<h1>",myan,"</h1>");
+
+        function g_otp()
+        {
+         location.reload(); 
+        }
+    </script>
+
+</head>
+<body background="wallpaperflare.com_wallpaper (3).jpg">
+    <br>
+    <img id="lock" src="lock.png" alt="">
+     <br><br><br><br>
+   
+    <button id="gen" onclick="g_otp();" > OTP Genetare</button>
+ 
+    <h2> <span> O</span>NE <br> <span>T</span>IME <br> <span> P</span>ASSWORD </h2>
+
+</body>
+</html>
